@@ -1,38 +1,100 @@
-.App {
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: #17173d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #2b2b5a;
+  padding: 10px 0;
+}
+
+.connect-wallet-button span {
+  color: #08e15f;
+}
+
+.content-container {
   text-align: center;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lumos-hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+
+.title {
   color: white;
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.subtitle {
+  color: white;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wallet-action-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.wallet-input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #5571db;
+  color: #333;
+}
+
+.action-button {
+  width: 25%;
+  background-color: #5571db;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #4161c4;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 20px;
+}
+
+.transaction-box {
+  margin-top: 20px;
+  background-color: white;
+  color: #333;
+  border-radius: 8px;
+}
+
+.panel-heading {
+  background-color: #2b2b5a;
+  color: white;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.lumos-panel-content {
+  padding: 10px;
+  color: #333;
 }
