@@ -112,7 +112,7 @@ function App() {
                 defaultValue={walletAddress}
               />
               <button onClick={getLMSTokenHandler} disabled={!walletAddress} className="send-lms">
-                SEND LMS
+                SEND ME LMS
               </button>
             </div>
             <div>
