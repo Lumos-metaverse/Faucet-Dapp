@@ -1,24 +1,31 @@
-.app-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  background-color: #17173d;
-  color: white;
+.home{
   font-family: Arial, sans-serif;
+  background-color: #17173d;
+  height: 100vh;
 }
 
 .navbar {
   background-color: #2b2b5a;
   padding: 10px 0;
+  text-align: right;
 }
 
 .connect-wallet-button span {
   color: #08e15f;
 }
 
+.hero{
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .content-container {
   text-align: center;
-  margin-top: 100px;
+  margin: 70px 0;
 }
 
 .lumos-hero {
@@ -47,27 +54,31 @@
 }
 
 .wallet-input {
-  width: 70%;
+  width: 100%;
   padding: 10px;
+  margin: 10px;
   border-radius: 8px;
   border: 2px solid #5571db;
   color: #333;
 }
 
-.action-button {
-  width: 25%;
-  background-color: #5571db;
-  color: white;
-  border-radius: 8px;
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 10px;
-  font-size: 1rem;
-  transition: background-color 0.3s;
 }
 
-.action-button:hover {
-  background-color: #4161c4;
+button:hover {
+  background-color: #0056b3;
+}
+
+.send-lms{
+  font-weight: bolder;
+  text-wrap: nowrap;
+
 }
 
 .error-message {
@@ -98,3 +109,10 @@
   padding: 10px;
   color: #333;
 }
+
+.footer{
+  margin-top: 70px;
+  color: white;
+  text-align: center;
+}
+

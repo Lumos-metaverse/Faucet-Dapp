@@ -90,7 +90,7 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className="home">
       <nav className="navbar">
               <button className="connect-wallet-button" onClick={connectWallet}>
                 <span>
@@ -100,7 +100,7 @@ function App() {
                 </span>
               </button>
       </nav>
-      <section className="lumos-hero">
+      <section className="hero">
           <div className="content-container">
             <h1 className="title">Lumos Faucet</h1>
             <p className="subtitle">Fast and reliable. 3 LMS/day.</p>
@@ -111,8 +111,8 @@ function App() {
                 placeholder="Enter your wallet address (0x...)"
                 defaultValue={walletAddress}
               />
-              <button className="action-button" onClick={getLMSTokenHandler} disabled={!walletAddress}>
-                SEND ME LMS
+              <button onClick={getLMSTokenHandler} disabled={!walletAddress} className="send-lms">
+                SEND LMS
               </button>
             </div>
             <div>
@@ -131,6 +131,7 @@ function App() {
             </div>
         </div>
       </section>
+    <p className="footer"> Support with more Faucet ❤️ </p>
     </div>
   );
 }
