@@ -16,14 +16,24 @@ function App() {
     addWalletListener();
   }, [walletAddress]);
 
+  const CHAIN_ID = 11155111;
+  const NETWORK_NAME = "Sepolia test network";
+  const CURRENCY = "SepoliaETH";
 
   const connectWallet = async () => {
     if (typeof window != "undefined" && typeof window.ethereum != "undefined") {
       try {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
+
         const accounts = await provider.send("eth_requestAccounts", []);
+
+        const { chainId } = await provider.getNetwork();
         
         setSigner(provider.getSigner());
+        if (chainId !== CHAIN_ID) {
+          window.alert(`Please switch to the ${NETWORK_NAME} network!`);
+              throw new Error(`Please switch to the ${NETWORK_NAME} network`);
+          }
         setlumosfaucetContract(faucetContract(provider));
         setWalletAddress(accounts[0]);
       } catch (err) {
@@ -69,8 +79,19 @@ function App() {
   const getLMSTokenHandler = async () => {
     setWithdrawError("");
     setWithdrawSuccess("");
+   
 
     try {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+    
+      const { chainId } = await provider.getNetwork();
+  
+            setSigner(provider.getSigner());
+            if (chainId !== CHAIN_ID) {
+              window.alert(`Please switch to the ${NETWORK_NAME} network!`);
+                  throw new Error(`Please switch to the ${NETWORK_NAME} network`);
+              }
+
       const lumosfaucetContractWithSigner = lumosfaucetContract.connect(signer);
 
       const checkRequest =  await lumosfaucetContractWithSigner.isAccessibleToMint();
